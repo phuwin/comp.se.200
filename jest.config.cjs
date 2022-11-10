@@ -4,5 +4,6 @@ module.exports = {
   collectCoverageFrom: [
     'src/add.js',
     'src/eq.js',
+    'src/filter.js'
   ],
 };
