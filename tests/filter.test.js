@@ -35,7 +35,15 @@ test('filter should return an empty array if the predicate value is not availabl
     expect(filter([1, 2, 3], () => { })).toEqual([]);
 });
 
+// Test that filter should failed if the array is empty
+test('filter should failed if the array is empty', () => {
+    expect(filter([], () => true)).toEqual([[]]);
+});
 
+// Test that filter should failed if the array is null
+test('filter should failed if the array is null', () => {
+    expect(filter(null, () => true)).toEqual([[]]);
+});
 
 
 
