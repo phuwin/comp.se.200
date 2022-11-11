@@ -11,6 +11,6 @@ module.exports = {
     'src/countBy.js',
     'src/compact.js',
     'src/toNumber.js',
-    'src/word.js'
+    'src/words.js'
   ],
 };
