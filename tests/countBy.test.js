@@ -2,16 +2,15 @@ import countBy from '../src/countBy';
 
 // Test that countBy should return an object with the correct counts
 test('countBy should return an object with the correct counts', () => {
-    const fruits = [
-        { 'type': 'apple', 'color': 'red' },
-        { 'type': 'apple', 'color': 'green' },
-        { 'type': 'banana', 'color': 'yellow' },
+    const users = [
+        { 'user': 'barney', 'active': true },
+        { 'user': 'betty', 'active': true },
+        { 'user': 'fred', 'active': false }
     ];
 
-    expect(countBy(fruits, fruit => fruit.color)).toEqual({
-        'red': 1,
-        'green': 1,
-        'yellow': 1
+    expect(countBy(users, value => value.active)).toEqual({
+        'true': 2,
+        'false': 1
     });
 });
 
