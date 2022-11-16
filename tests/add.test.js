@@ -45,54 +45,54 @@ test('add first number is zero and second number is zero', () => {
   expect(add(0, 0)).toBe(0);
 });
 
-// Test add 2 strings
-test('add 2 strings', () => {
-  expect(add('a', 'b')).toBe('ab');
+// Test add 2 strings and return failed if not a number
+test('add 2 strings and return failed if not a number', () => {
+  expect(add('a', 'b')).toThrow();
 });
 
-// Test add 1 string and 1 number
-test('add 1 string and 1 number', () => {
-  expect(add('a', 1)).toBe('a1');
+// Test add first number is string and second number is number
+test('add first number is string and second number is number', () => {
+  expect(add('a', 1)).toThrow();
 });
 
-// Test add 1 number and 1 string
-test('add 1 number and 1 string', () => {
-  expect(add(1, 'a')).toBe('1a');
+// Test add first number is number and second number is string
+test('add first number is number and second number is string', () => {
+  expect(add(1, 'a')).toThrow();
 });
 
-// Test add undefined and undefined, should return default value: 0
+// Test add undefined and undefined, return failed if not a number
 test('add undefined and undefined', () => {
-  expect(add(undefined, undefined)).toBe(0);
+  expect(add(undefined, undefined)).toThrow();
 });
 
-// Test add undefined and 1, should return 1
+// Test add undefined and 1, return failed if not a number
 test('add undefined and 1', () => {
-  expect(add(undefined, 1)).toBe(1);
+  expect(add(undefined, 1)).toThrow();
 });
 
-// Test add 1 and undefined, should return 1
+// Test add 1 and undefined, return failed if not a number
 test('add 1 and undefined', () => {
-  expect(add(1, undefined)).toBe(1);
+  expect(add(1, undefined)).toThrow();
 });
 
-// Test add null and null, should return default value: 0
+// Test add null and null, return failed if not a number
 test('add null and null', () => {
-  expect(add(null, null)).toBe(0);
+  expect(add(null, null)).toThrow();
 });
 
-// Test add null and 1, should return 1
+// Test add null and 1, return failed if not a number
 test('add null and 1', () => {
-  expect(add(null, 1)).toBe(1);
+  expect(add(null, 1)).toThrow();
 });
 
-// Test add 1 and null, should return 1
+// Test add 1 and null, return failed if not a number
 test('add 1 and null', () => {
-  expect(add(1, null)).toBe(1);
+  expect(add(1, null)).toThrow();
 });
 
-// Test add empty string and empty string, should return default value: 0
+// Test add empty string and empty string, return failed if not a number
 test('add empty string and empty string', () => {
-  expect(add('', '')).toBe('');
+  expect(add('', '')).toThrow();
 });
 
 
